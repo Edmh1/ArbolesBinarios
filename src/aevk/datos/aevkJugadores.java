@@ -33,11 +33,24 @@ public class aevkJugadores {
     public void eliminar(String usuario){
         arbol.eliminar(new Jugador(usuario));
     }
+     
+    ArrayList<Jugador> jugadoresPorRol = new ArrayList<>();
+    private void hallarJugadoresPorRol(Nodo<Jugador> r, String rol){
+        if(r != null){
+            if(r.dato.getRol().equals(rol)){
+                jugadoresPorRol.add(r.dato);
+            }
+            hallarJugadoresPorRol(r.izq, rol);
+            hallarJugadoresPorRol(r.der, rol);
+        }
+    }
     
+    public void hallarJugadoresPorRol(String rol){
+        hallarJugadoresPorRol(arbol.getRaiz(), rol);
+    }
     
-    
-    
-    
- 
+    public ArrayList<Jugador> retornarListaJugadoresPorRol(){
+        return jugadoresPorRol;
+    }
     
 }

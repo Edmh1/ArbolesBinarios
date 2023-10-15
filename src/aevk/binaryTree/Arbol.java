@@ -134,7 +134,9 @@ public class Arbol<E extends Comparable> {
         }
     }
     
-   
+   public Nodo<E> getRaiz(){
+       return raiz;
+   }
     
     
     

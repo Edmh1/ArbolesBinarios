@@ -24,6 +24,8 @@ public class Testing {
         System.out.println("aqioooooooooo"+jugadoresAevk.toString());
         System.out.println(""+jugadoresAevk.nDeJugadores());
         
+        jugadoresAevk.hallarJugadoresPorRol("mago");
+        System.out.println("\njugadores por rol: " + jugadoresAevk.retornarListaJugadoresPorRol());
         
     }
 }
