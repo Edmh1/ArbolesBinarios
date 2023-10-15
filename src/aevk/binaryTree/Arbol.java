@@ -3,10 +3,12 @@
  */
 package aevk.binaryTree;
 
+import java.util.ArrayList;
+
 
 public class Arbol<E extends Comparable> {
     private Nodo<E> raiz;  
-
+    
     //agrega un objeto al arbol
     public void insertar(E x){
         Nodo<E> nuevo = new Nodo<>(x); 
@@ -132,7 +134,7 @@ public class Arbol<E extends Comparable> {
         }
     }
     
-    
+   
     
     
     

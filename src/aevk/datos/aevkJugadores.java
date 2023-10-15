@@ -5,11 +5,10 @@
 package aevk.datos;
 
 import aevk.binaryTree.Arbol;
+import aevk.binaryTree.Nodo;
+import java.util.ArrayList;
 
-/**
- *
- * @author edavi
- */
+
 public class aevkJugadores {
     
     Arbol<Jugador> arbol = new Arbol<>();
@@ -34,5 +33,11 @@ public class aevkJugadores {
     public void eliminar(String usuario){
         arbol.eliminar(new Jugador(usuario));
     }
+    
+    
+    
+    
+    
+ 
     
 }
