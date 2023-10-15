@@ -3,8 +3,6 @@
  */
 package aevk.binaryTree;
 
-import java.util.ArrayList;
-
 
 public class Arbol<E extends Comparable> {
     private Nodo<E> raiz;  
@@ -60,6 +58,19 @@ public class Arbol<E extends Comparable> {
         }
         else{
             return 1 + peso(r.izq) + peso(r.der);
+        }
+    }
+    
+    //Altura del arbol
+    public int altura(){
+        return altura(raiz);
+    }
+    private int altura(Nodo<E> r) {
+        if(r == null){
+            return 0;
+        }
+        else{
+            return 1 + Integer.max(altura(r.izq),altura(r.der));
         }
     }
     
@@ -133,6 +144,8 @@ public class Arbol<E extends Comparable> {
             }
         }
     }
+
+    
     
    public Nodo<E> getRaiz(){
        return raiz;
