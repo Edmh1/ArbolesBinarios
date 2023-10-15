@@ -23,9 +23,8 @@ public class Testing {
         jugadoresAevk.eliminar("andres");
         System.out.println("aqioooooooooo"+jugadoresAevk.toString());
         System.out.println(""+jugadoresAevk.nDeJugadores());
-        
-        jugadoresAevk.hallarJugadoresPorRol("mago");
-        System.out.println("\njugadores por rol: " + jugadoresAevk.retornarListaJugadoresPorRol());
+       
+        System.out.println("\njugadores por rol: " + jugadoresAevk.hallarJugadoresPorRol("mago"));
         
     }
 }
