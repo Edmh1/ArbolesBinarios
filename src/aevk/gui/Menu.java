@@ -71,7 +71,7 @@ public class Menu {
                 case 6:
                     String rolBusc= JOptionPane.showInputDialog(null, "Digite el rol de juego que quiere listar: "); 
                     String list="";
-                    for (Jugador jugador : jugadoresAevk.hallarJugadoresPorRol("mago")) {
+                    for (Jugador jugador : jugadoresAevk.hallarJugadoresPorRol(rolBusc)) {
                         list+=jugador.toString()+"\n";
                     }
                     JOptionPane.showMessageDialog(null, "Listado de jugadores con el rol de juego indicado: \n"+list+"\n");
