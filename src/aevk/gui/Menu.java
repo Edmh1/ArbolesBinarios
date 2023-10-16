@@ -47,15 +47,10 @@ public class Menu {
                     
                     persi.save(jugadoresAevk);
                     break;
-                    
-                    
                 case 2: 
                     JOptionPane.showMessageDialog(null, jugadoresAevk.toString());
                     break;
-
-
                 case 3:
-                    
                     String usuarioBusc = JOptionPane.showInputDialog("Digite el nombre de usuario del jugador a buscar: ");
                     if(usuarioBusc != null){
                         JOptionPane.showMessageDialog(null, "   "+jugadoresAevk.buscar(usuarioBusc));
@@ -64,35 +59,30 @@ public class Menu {
                     }
                     JOptionPane.showMessageDialog(null, "   "+jugadoresAevk.buscar(usuarioBusc));
                     break; 
-                    
-                     
-                    
-
                 case 4: 
                    String usuarioEli = JOptionPane.showInputDialog("Digite el nombre de usuario del jugador a eliminar: ");
                     jugadoresAevk.eliminar(usuarioEli);
                     JOptionPane.showMessageDialog(null, "Listado de jugadores resultante luego de eliminar: "+jugadoresAevk.toString());
                     persi.save(jugadoresAevk);
-                    break; 
-                    
+                    break;  
                 case 5: 
                     JOptionPane.showMessageDialog(null, "El numero de jugadores en la base de datos es: "+jugadoresAevk.nDeJugadores());
-                    
-                    break; 
- 
+                    break;
                 case 6:
                     String rolBusc= JOptionPane.showInputDialog(null, "Digite el rol de juego que quiere listar: "); 
-                    jugadoresAevk.hallarJugadoresPorRol(rolBusc); 
-                    JOptionPane.showMessageDialog(null, "Listado de jugadores con el rol de juego indicado: \n"+jugadoresAevk.hallarJugadoresPorRol(rolBusc)+"\n");
-
+                    String list="";
+                    for (Jugador jugador : jugadoresAevk.hallarJugadoresPorRol("mago")) {
+                        list+=jugador.toString()+"\n";
+                    }
+                    JOptionPane.showMessageDialog(null, "Listado de jugadores con el rol de juego indicado: \n"+list+"\n");
                     break; 
-                    
-                    
                 case 7: 
-                    JOptionPane.showMessageDialog(null, "10 jugadores con mayor cantidad de monedas (arx)"+jugadoresAevk.top10ConMasDinero()+"\n");
-
-                    break; 
-                    
+                    String lis ="";
+                    for (Jugador jugador : jugadoresAevk.top10ConMasDinero()) {
+                        lis+=jugador.toString()+"\n";
+                    }
+                    JOptionPane.showMessageDialog(null, "10 jugadores con mayor cantidad de monedas (arx)"+"\n"+lis);
+                    break;
                 default: 
                     JOptionPane.showMessageDialog(null, "El numero digitado no se encuentra entre las opciones disponibles ");
                     break; 

@@ -29,7 +29,10 @@ public class Testing {
         //5
         System.out.println("prueba 5: "+jugadoresAevk.nDeJugadores());
         //6
-        System.out.println("prueba 6: \njugadores por rol: " + jugadoresAevk.hallarJugadoresPorRol("mago"));
+        System.out.println("prueba 6: ");
+        for (Jugador jugador : jugadoresAevk.hallarJugadoresPorRol("mago")) {
+            System.out.println(""+ jugador.toString()+"\n");
+        }
         //7
         System.out.println("prueba 7: ");
         for (Jugador jugador : jugadoresAevk.top10ConMasDinero()) {
