@@ -4,13 +4,13 @@
 package aevk.testing;
 
 import aevk.datos.Jugador;
-import aevk.datos.aevkJugadores;
+import aevk.datos.AevkJugadores;
 
 
 public class Testing {
     public static void main(String[] args) {
          
-        aevkJugadores jugadoresAevk = new aevkJugadores();
+        AevkJugadores jugadoresAevk = new AevkJugadores();
         
         jugadoresAevk.add(new Jugador("eddie", "mago", 15, 2000, 100, 200));
         jugadoresAevk.add(new Jugador("andres", "ladron", 1, -10, 1, 200));
@@ -25,6 +25,8 @@ public class Testing {
         System.out.println(""+jugadoresAevk.nDeJugadores());
        
         System.out.println("\njugadores por rol: " + jugadoresAevk.hallarJugadoresPorRol("mago"));
-        
+        for (Jugador jugador : jugadoresAevk.top10ConMasDinero()) {
+            System.out.println(""+jugador);
+        }
     }
 }

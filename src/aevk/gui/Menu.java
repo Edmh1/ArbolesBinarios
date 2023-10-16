@@ -4,7 +4,7 @@
 package aevk.gui;
 
 import aevk.datos.Jugador;
-import aevk.datos.aevkJugadores;
+import aevk.datos.AevkJugadores;
 import javax.swing.JOptionPane;
 
 public class Menu {
@@ -20,7 +20,7 @@ public class Menu {
                 + "\n3. Listar jugadores"
                 + "\n4. Cantidad de jugadores en la base de datos      "
                 + "\n5. Eliminar un jugador daddo su nombre de usuario"; 
-        aevkJugadores jugadoresAevk = new aevkJugadores(); 
+        AevkJugadores jugadoresAevk = new AevkJugadores(); 
         int opcion=0; 
         
         do {            

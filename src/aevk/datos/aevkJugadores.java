@@ -7,9 +7,11 @@ package aevk.datos;
 import aevk.binaryTree.Arbol;
 import aevk.binaryTree.Nodo;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 
-public class aevkJugadores {
+public class AevkJugadores {
     
     Arbol<Jugador> arbol = new Arbol<>();
     
@@ -55,5 +57,31 @@ public class aevkJugadores {
         return jugadoresPorRol;
     }
    
+    // Listar los 10 jugadores con más dinero
+    public ArrayList<Jugador> top10ConMasDinero() {
+        ArrayList<Jugador> listaJugadores = new ArrayList<>();
+        recopilarJugadores(arbol.getRaiz(), listaJugadores);
+
+        // Ordenar la lista de jugadores por dinero de manera descendente
+        Collections.sort(listaJugadores, new ArxComparator());
+
+        // Tomar los primeros 10 jugadores con más dinero o todos si hay menos de 10
+        int top = Math.min(10, listaJugadores.size());
+        ArrayList<Jugador> top10 = new ArrayList<>(top);
+        for (int i = 0; i < top; i++) {
+            top10.add(listaJugadores.get(i));
+        }
+        return top10;
+    }
+    private void recopilarJugadores(Nodo<Jugador> r, List<Jugador> listaJugadores) {
+        if (r != null) {
+            listaJugadores.add(r.dato);
+            recopilarJugadores(r.izq, listaJugadores);
+            recopilarJugadores(r.der, listaJugadores);
+        }
+    }
+
+    
+    
     
 }
