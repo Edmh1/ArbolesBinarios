@@ -72,8 +72,7 @@ public class AevkJugadores implements Serializable{
             top10.add(listaJugadores.get(i));
         }
         return top10;
-    }
-    
+    } 
     private void recopilarJugadores(Nodo<Jugador> r, ArrayList<Jugador> listaJugadores) {
         if (r != null) {
             listaJugadores.add(r.dato);

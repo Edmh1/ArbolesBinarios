@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package aekv.persistencia;
+package aevk.persistencia;
 
 import aevk.datos.AevkJugadores;
 import aevk.datos.Jugador;

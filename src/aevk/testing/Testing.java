@@ -3,7 +3,7 @@
  */
 package aevk.testing;
 
-import aekv.persistencia.Serializar;
+import aevk.persistencia.Serializar;
 import aevk.datos.Jugador;
 import aevk.datos.AevkJugadores;
 import java.io.File;
