@@ -5,28 +5,36 @@ package aevk.testing;
 
 import aevk.datos.Jugador;
 import aevk.datos.AevkJugadores;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import umag.persistencia.Serializar;
 
 
 public class Testing {
-    public static void main(String[] args) {
-         
-        AevkJugadores jugadoresAevk = new AevkJugadores();
+    public static void main(String[] args) throws IOException, FileNotFoundException, ClassNotFoundException {
         
-        jugadoresAevk.add(new Jugador("eddie", "mago", 15, 2000, 100, 200));
-        jugadoresAevk.add(new Jugador("andres", "ladron", 1, -10, 1, 200));
-        jugadoresAevk.add(new Jugador("vladimir", "luchador", 25, 100, 100, 200));
-        jugadoresAevk.add(new Jugador("kevin", "mago", 15, 500, 100, 200));
+        //recuperando los datos
+        Serializar persi = new Serializar();
+        AevkJugadores jugadoresAevk = persi.toGet();
         
-        System.out.println(""+jugadoresAevk.toString());
-        
-        System.out.println(""+jugadoresAevk.buscar("andres"));
-        jugadoresAevk.eliminar("andres");
-        System.out.println("aqioooooooooo"+jugadoresAevk.toString());
-        System.out.println(""+jugadoresAevk.nDeJugadores());
-       
-        System.out.println("\njugadores por rol: " + jugadoresAevk.hallarJugadoresPorRol("mago"));
+        //haciendo las pruebas
+        //2
+        System.out.println("Prueba 2: "+jugadoresAevk.toString());
+        //3
+        System.out.println("prueba 3: "+jugadoresAevk.buscar("liam"));
+        //4
+        jugadoresAevk.eliminar("liam");
+        //4
+        System.out.println("prueba 4: "+jugadoresAevk.buscar("liam"));
+        //5
+        System.out.println("prueba 5: "+jugadoresAevk.nDeJugadores());
+        //6
+        System.out.println("prueba 6: \njugadores por rol: " + jugadoresAevk.hallarJugadoresPorRol("mago"));
+        //7
+        System.out.println("prueba 7: ");
         for (Jugador jugador : jugadoresAevk.top10ConMasDinero()) {
-            System.out.println(""+jugador);
+            System.out.println(jugador+"\n");
         }
     }
 }
