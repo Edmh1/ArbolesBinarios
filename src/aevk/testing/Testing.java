@@ -25,7 +25,6 @@ public class Testing {
         System.out.println("prueba 3: "+jugadoresAevk.buscar("liam"));
         //4
         jugadoresAevk.eliminar("liam");
-        //4
         System.out.println("prueba 4: "+jugadoresAevk.buscar("liam"));
         //5
         System.out.println("prueba 5: "+jugadoresAevk.nDeJugadores());

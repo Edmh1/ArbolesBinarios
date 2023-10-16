@@ -45,11 +45,11 @@ public class DatosDefault {
         Serializar persi = new Serializar();
         persi.save(jugadoresAevk);
 
-        // Recuperar y mostrar los jugadores
-        if(new File("jugadores.data").exists()){
-            AevkJugadores recuperar = persi.toGet();
-            System.out.println(" " + recuperar.toString());
-        }
+//        // Recuperar y mostrar los jugadores
+//        if(new File("jugadores.data").exists()){
+//            AevkJugadores recuperar = persi.toGet();
+//            System.out.println(" " + recuperar.toString());
+//        }
         
     }
 }
