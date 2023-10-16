@@ -18,7 +18,7 @@ public class DatosDefault {
     public static void main(String[] args) throws IOException, FileNotFoundException, ClassNotFoundException {
         AevkJugadores jugadoresAevk = new AevkJugadores();
         
-        //agregando 20 jugadores por default 
+        //agregando 15 jugadores por default 
         //prueba 1:
 //        jugadoresAevk.add(new Jugador("Alex", "mago", 12, 2300.5, 15, 65));
 //        jugadoresAevk.add(new Jugador("Emily", "ladron", 8, 980.7, 4, 29));
@@ -35,11 +35,6 @@ public class DatosDefault {
 //        jugadoresAevk.add(new Jugador("Jacob", "mago", 6, 701.4, 11, 50));
 //        jugadoresAevk.add(new Jugador("Lily", "ladron", 1, 512.8, 3, 22));
 //        jugadoresAevk.add(new Jugador("Benjamin", "luchador", 17, 3479.5, 25, 88));
-//        jugadoresAevk.add(new Jugador("Sophia", "mago", 9, 1235.6, 14, 59));
-//        jugadoresAevk.add(new Jugador("Lucas", "ladron", 4, 420.3, 7, 35));
-//        jugadoresAevk.add(new Jugador("Grace", "luchador", 13, 2512.1, 18, 63));
-//        jugadoresAevk.add(new Jugador("Daniel", "mago", 2, 327.7, 6, 27));
-//        jugadoresAevk.add(new Jugador("Zoe", "ladron", 15, 3121.4, 21, 84));
         
          // Serializar y guardar los jugadores
         Serializar persi = new Serializar();
