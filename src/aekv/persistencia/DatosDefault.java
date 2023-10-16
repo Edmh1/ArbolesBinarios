@@ -6,17 +6,20 @@ package aekv.persistencia;
 
 import aevk.datos.AevkJugadores;
 import aevk.datos.Jugador;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import umag.persistencia.Serializar;
 
 /**
  *
  * @author edavi
  */
 public class DatosDefault {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, FileNotFoundException, ClassNotFoundException {
         AevkJugadores jugadoresAevk = new AevkJugadores();
         
         //agregando 20 jugadores por default
-        
         jugadoresAevk.add(new Jugador("Alex", "mago", 12, 2300.5, 15, 65));
         jugadoresAevk.add(new Jugador("Emily", "ladron", 8, 980.7, 4, 29));
         jugadoresAevk.add(new Jugador("Liam", "luchador", 19, 3345.2, 27, 92));
@@ -37,6 +40,16 @@ public class DatosDefault {
         jugadoresAevk.add(new Jugador("Grace", "luchador", 13, 2512.1, 18, 63));
         jugadoresAevk.add(new Jugador("Daniel", "mago", 2, 327.7, 6, 27));
         jugadoresAevk.add(new Jugador("Zoe", "ladron", 15, 3121.4, 21, 84));
+        
+         // Serializar y guardar los jugadores
+        Serializar persi = new Serializar();
+        persi.save(jugadoresAevk);
 
+        // Recuperar y mostrar los jugadores
+        if(new File("jugadores.data").exists()){
+            AevkJugadores recuperar = persi.toGet();
+            System.out.println(" " + recuperar.toString());
+        }
+        
     }
 }

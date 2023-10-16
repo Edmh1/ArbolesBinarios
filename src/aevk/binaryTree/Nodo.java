@@ -2,9 +2,9 @@
 
  */
 package aevk.binaryTree;
+import java.io.Serializable;
 
-
-public class Nodo<E> {
+public class Nodo<E> implements Serializable{
     public E dato; 
     public Nodo<E> izq; 
     public Nodo<E> der; 

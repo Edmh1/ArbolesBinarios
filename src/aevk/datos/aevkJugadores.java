@@ -6,12 +6,13 @@ package aevk.datos;
 
 import aevk.binaryTree.Arbol;
 import aevk.binaryTree.Nodo;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 
-public class AevkJugadores {
+public class AevkJugadores implements Serializable{
     
     Arbol<Jugador> arbol = new Arbol<>();
     

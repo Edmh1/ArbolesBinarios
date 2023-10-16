@@ -2,8 +2,9 @@
 
  */
 package aevk.datos;
+import java.io.Serializable;
 
-public class Jugador implements Comparable<Jugador>{
+public class Jugador implements Comparable<Jugador>, Serializable{
     
     //Atributos 
     private String usuario; //nombre

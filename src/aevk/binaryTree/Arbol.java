@@ -2,9 +2,9 @@
 
  */
 package aevk.binaryTree;
+import java.io.Serializable;
 
-
-public class Arbol<E extends Comparable> {
+public class Arbol<E extends Comparable> implements Serializable {
     private Nodo<E> raiz;  
     
     //1.agrega un objeto al arbol
