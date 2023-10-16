@@ -9,11 +9,11 @@ public class Jugador implements Comparable<Jugador>{
     private String usuario; //nombre
     private String rol; //clase de jugador
     private int nivelXp; //nivel
-    private float arx; //moneda
+    private double arx; //moneda
     private int nvictorias; //n° de duelos ganados
     private int nDuelos; //n° duelos jugados
 
-    public Jugador(String usuario, String rol, int nivelXp, float arx, int nvictorias, int nDuelos) {
+    public Jugador(String usuario, String rol, int nivelXp, double arx, int nvictorias, int nDuelos) {
         this.usuario = usuario;
         this.rol = rol;
         this.nivelXp = nivelXp;
@@ -55,7 +55,7 @@ public class Jugador implements Comparable<Jugador>{
     /**
      * @return the arx
      */
-    public float getArx() {
+    public double getArx() {
         return arx;
     }
 
