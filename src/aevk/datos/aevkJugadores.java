@@ -15,33 +15,33 @@ public class AevkJugadores {
     
     Arbol<Jugador> arbol = new Arbol<>();
     
-    //añade un jugador
+    //1.añade un jugador
     public void add(Jugador jugador){
         arbol.insertar(jugador);
     }
 
-    //Listar todos los jugadores
+    //2.Listar todos los jugadores
     @Override
     public String toString() {
         return "aevkJugadores{" + "arbol=" + arbol.toString() + '}';
     }
     
-    //hallar el numero de jugadores
+    //3.hallar el numero de jugadores
     public int nDeJugadores(){
         return arbol.peso();
     }
     
-    //buscar un jugador por usuario
+    //4.buscar un jugador por usuario
     public Jugador buscar(String usuario){
         return arbol.buscar(new Jugador(usuario));
     }
     
-    //eliminar un jugador por usuario
+    //5.eliminar un jugador por usuario
     public void eliminar(String usuario){
         arbol.eliminar(new Jugador(usuario));
     }
      
-    //hallar jugadores por rol
+    //6.hallar jugadores por rol
     ArrayList<Jugador> jugadoresPorRol = new ArrayList<>();
     private void hallarJugadoresPorRol(Nodo<Jugador> r, String rol){
         if(r != null){
@@ -57,7 +57,7 @@ public class AevkJugadores {
         return jugadoresPorRol;
     }
    
-    // Listar los 10 jugadores con más dinero
+    //7.Listar los 10 jugadores con más dinero
     public ArrayList<Jugador> top10ConMasDinero() {
         ArrayList<Jugador> listaJugadores = new ArrayList<>();
         recopilarJugadores(arbol.getRaiz(), listaJugadores);

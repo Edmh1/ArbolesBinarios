@@ -7,7 +7,7 @@ package aevk.binaryTree;
 public class Arbol<E extends Comparable> {
     private Nodo<E> raiz;  
     
-    //agrega un objeto al arbol
+    //1.agrega un objeto al arbol
     public void insertar(E x){
         Nodo<E> nuevo = new Nodo<>(x); 
         if(raiz == null){
@@ -34,7 +34,7 @@ public class Arbol<E extends Comparable> {
         }
     }
     
-    //imprime los objetos del arbol
+    //2.imprime los objetos del arbol
     @Override
     public String toString() {
         return inorden(raiz);
@@ -48,7 +48,7 @@ public class Arbol<E extends Comparable> {
         }
     }
     
-    //numero de objetos en el arbol
+    //3.numero de objetos en el arbol
     public int peso(){
         return peso(raiz);
     }
@@ -61,7 +61,7 @@ public class Arbol<E extends Comparable> {
         }
     }
     
-    //Altura del arbol
+    //4.Altura del arbol
     public int altura(){
         return altura(raiz);
     }
@@ -74,7 +74,7 @@ public class Arbol<E extends Comparable> {
         }
     }
     
-    //buscar returna el objeto
+    //5.buscar returna el objeto
     public E buscar(E x){
         if(raiz==null){
             return null;
@@ -92,7 +92,6 @@ public class Arbol<E extends Comparable> {
                 else
                     return buscar(r.izq, x);
             }else{
-                //aqui
                 if(r.der==null)
                     return null;
                 else
@@ -102,7 +101,7 @@ public class Arbol<E extends Comparable> {
     }
     
     
-    //eliminar
+    //6.eliminar
     public void eliminar(E x){
         if(buscar(x)!= null){
             raiz= eliminar(raiz,x);
