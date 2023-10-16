@@ -3,16 +3,19 @@
  */
 package aevk.gui;
 
+import aekv.persistencia.Serializar;
 import aevk.datos.Jugador;
 import aevk.datos.AevkJugadores;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import javax.swing.JOptionPane;
 
 public class Menu {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, FileNotFoundException, ClassNotFoundException {
         menu(); 
     }
 
-    private static void menu() {
+    private static void menu() throws IOException, FileNotFoundException, ClassNotFoundException {
         String menu = "\n°~~~~~~~~~~~~   Bienvenido al menu de opciones  ~~~~~~~~~~°       "
                 + "\n                                                    "
                 + "\n1. Ingresar un nuevo jugador      "
@@ -20,7 +23,8 @@ public class Menu {
                 + "\n3. Listar jugadores"
                 + "\n4. Cantidad de jugadores en la base de datos      "
                 + "\n5. Eliminar un jugador daddo su nombre de usuario"; 
-        AevkJugadores jugadoresAevk = new AevkJugadores(); 
+        Serializar persi = new Serializar();
+        AevkJugadores jugadoresAevk = persi.toGet(); 
         int opcion=0; 
         
         do {            
@@ -37,6 +41,7 @@ public class Menu {
                     jugadoresAevk.add(jug);
                     JOptionPane.showConfirmDialog(null, "¡Jugador ingresado correctamente!"); 
                     
+                    persi.save(jugadoresAevk);
                     break;
                     
                 case 2: 
