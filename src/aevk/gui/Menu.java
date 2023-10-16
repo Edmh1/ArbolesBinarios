@@ -48,6 +48,7 @@ public class Menu {
                     persi.save(jugadoresAevk);
                     break;
                     
+                    
                 case 2: 
                     JOptionPane.showMessageDialog(null, jugadoresAevk.toString());
                     break;
@@ -68,7 +69,7 @@ public class Menu {
                     
 
                 case 4: 
-                   String usuarioEli = JOptionPane.showInputDialog("Digite el nombre de usuario del jugador a buscar: ");
+                   String usuarioEli = JOptionPane.showInputDialog("Digite el nombre de usuario del jugador a eliminar: ");
                     jugadoresAevk.eliminar(usuarioEli);
                     JOptionPane.showMessageDialog(null, "Listado de jugadores resultante luego de eliminar: "+jugadoresAevk.toString());
                     persi.save(jugadoresAevk);
@@ -82,14 +83,13 @@ public class Menu {
                 case 6:
                     String rolBusc= JOptionPane.showInputDialog(null, "Digite el rol de juego que quiere listar: "); 
                     jugadoresAevk.hallarJugadoresPorRol(rolBusc); 
-                    JOptionPane.showMessageDialog(null, "Listado de jugadores con el rol de juego indicado: \n"+jugadoresAevk.hallarJugadoresPorRol(rolBusc));
+                    JOptionPane.showMessageDialog(null, "Listado de jugadores con el rol de juego indicado: \n"+jugadoresAevk.hallarJugadoresPorRol(rolBusc)+"\n");
 
                     break; 
                     
                     
                 case 7: 
-                    jugadoresAevk.top10ConMasDinero(); 
-                    JOptionPane.showMessageDialog(null, "10 jugadores con mayor cantidad de monedas (arx)");
+                    JOptionPane.showMessageDialog(null, "10 jugadores con mayor cantidad de monedas (arx)"+jugadoresAevk.top10ConMasDinero()+"\n");
 
                     break; 
                     
