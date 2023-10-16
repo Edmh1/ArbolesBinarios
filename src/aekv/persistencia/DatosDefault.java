@@ -9,7 +9,6 @@ import aevk.datos.Jugador;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import umag.persistencia.Serializar;
 
 /**
  *
